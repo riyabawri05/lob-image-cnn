@@ -4,7 +4,7 @@ Can a plain CNN predict short-term price moves from a limit order book (LOB) if 
 
 This was a five-person group project for ST311 (Artificial Intelligence) at the London School of Economics, written up in NeurIPS format. Read the full [paper](seeing-the-signal-paper.pdf) or the [slides](seeing-the-signal-slides.pdf).
 
-![A single LOB window encoded as a four-channel image](figures/sample_up.png)
+![A single LOB window encoded as a four-channel image](lob_image_example.png)
 
 ## The idea
 
@@ -34,7 +34,7 @@ FI-2010, Setup 2 (train on days 1 to 7, test on days 8 to 10), prediction horizo
 
 Most of the gain over DeepLOB arrives before any recurrent layer is added, since the CNN-MLP alone beats it by 5.35 F1 points and the LSTM adds a further 2.23. That suggests the predictive structure in a 100-step window is largely spatial. The linear baselines, which only see the last snapshot, sit around 42, so the signal lives in how the book evolves across the window rather than in any single moment. Scores stayed within 3 F1 points across the three test days.
 
-![CNN-LSTM training curves](figures/train_cnn_lstm.png)
+![CNN-LSTM training curves](cnn_lstm_training.png)
 
 ### Caveats
 
@@ -47,7 +47,8 @@ lob_image_cnn.ipynb            full pipeline: data download, image encoding, bas
                                models, two-stage hyperparameter search, training, evaluation
 seeing-the-signal-paper.pdf    NeurIPS-format write-up
 seeing-the-signal-slides.pdf   presentation slides
-figures/                       sample LOB images per class and training curves
+lob_image_example.png          one LOB window encoded as a four-channel image
+cnn_lstm_training.png          CNN-LSTM training curves
 requirements.txt
 ```
 
