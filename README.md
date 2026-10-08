@@ -67,7 +67,7 @@ Hyperparameters were tuned in two grid-search stages (learning rate and batch si
 
 ## My contribution
 
-I wrote the data description, the methodology equations, algorithm box and schematic diagrams, the results section and the abstract. On the code side, I fixed and re-ran the pipeline and rewrote the testing step so all models are evaluated on the pooled test set across days 8 to 10, which is the protocol DeepLOB reports and the source of the headline numbers above.
+I worked on the data description, methodology, algorithm box, schematic diagrams, the results section and the abstract. On the code side, I fixed and re-ran the pipeline and rewrote the testing step so all models are evaluated on the pooled test set across days 8 to 10, which is the protocol DeepLOB reports and the source of the headline numbers above.
 
 ## References
 
